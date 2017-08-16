@@ -6,4 +6,4 @@ RU: Генератор ведомости электронных докумен�
 - Python3
 - python-docx
 
-*To build* with cx_Freeze needs lxml in 'packages'
+Building with cx_Freeze is required lxml in 'packages'
