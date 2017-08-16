@@ -122,8 +122,9 @@ if __name__ == "__main__":
                             '   ' + lang['size']+': ' + str(size) + ' ' + lang['byte'] + '\r\n' +
                             '   ' + lang['checksum_sha1'] + ': ' + str(sha1) + '\r\n\r\n'
                         )
-                        i = i + 1
                         # changing identification sheet
+                        repl['Npp'] = str(i)
+                        i = i + 1
                         repl['file'] = filename
                         repl['sha-1_hash'] = sha1
                         repl['creator'] = inp['creator']
@@ -132,7 +133,6 @@ if __name__ == "__main__":
                         repl['date'] = time.strftime("%d.%m.%y", time.localtime())
                         repl['num'] = str(i // 2)
                         repl['count'] = ''
-                        repl['Npp'] = str(i)
                         add_table('iul_tempale.docx', repl, newIULFile)
                     except:
                         print('ERROR!!! File: ' + path)
