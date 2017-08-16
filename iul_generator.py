@@ -5,9 +5,7 @@ import os
 import datetime
 import time
 import hashlib
-#from docx import *
 import docx
-#from copy import deepcopy
 import copy
 import shutil
 import re
@@ -110,8 +108,6 @@ if __name__ == "__main__":
     with open(root_dir+'/'+cfg['fileName'], 'w', encoding='utf8') as f:
         f.write(cfg['fileTitle'])
         for top, dirs, nondirs in os.walk(root_dir):
-            # print(top)
-            # if os.path.basename(top) != cfg['exclude']:
             for name in nondirs:
                 path = str(os.path.join(top, name))
                 if path.lower().endswith(cfg['exclude_types']) is False and name != cfg['newIUL'] and name != cfg['fileName']:
